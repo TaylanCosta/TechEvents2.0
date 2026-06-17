@@ -140,4 +140,4 @@ Este projeto é de código aberto e está disponível sob a licença MIT. Veja [
 
 ## Autor
 
-Criado com amor por Manus AI
+Nalyat
