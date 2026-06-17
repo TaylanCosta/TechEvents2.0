@@ -1,0 +1,121 @@
+ :root {
+  /* Core palette */
+  --primary: #667eea;
+  --secondary: #764ba2;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* Radii & shadows */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-sm: 0 4px 10px rgba(16,24,40,0.06);
+  --shadow-md: 0 10px 30px rgba(16,24,40,0.12);
+
+  /* Typography scale */
+  --text-base-size: 18px;
+  --heading-font: var(--heading);
+}
+
+/* Layout helpers */
+.container {
+  width: 1126px;
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+.row {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.col { flex: 1 1 0; }
+
+/* Card */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-md);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+}
+
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+}
+
+/* Form controls */
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border, #eaeaea);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(102,126,234,0.12);
+  border-color: var(--primary);
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Utilities */
+.text-muted { color: var(--muted); }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mt-16 { margin-top: 16px; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+}
